@@ -1,4 +1,5 @@
 const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
 const express = require("express");
 const formidable = require("express-formidable");
 const uid2 = require("uid2");
@@ -92,6 +93,6 @@ cron.schedule(
   }
 );
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server has started");
 });
